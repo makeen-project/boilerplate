@@ -12,16 +12,19 @@ class Play extends Module {
       { jwtMiddleware },
       { generateRESTRouter, addRouter },
       { createRepository },
-    ] = await this.dependencies(['user', 'router', 'storage']);
+    ] = await this.dependencies(['user', 'router', 'mongoDb']);
 
     addRouter('playRouter', router({ jwtMiddleware }));
 
-    const ProductRepository = createRepository('Product', {
-      _id: Joi.object(),
-      name: Joi.string().required(),
-      price: Joi.number().required(),
-      createdAt: Joi.date(),
-      updatedAt: Joi.date(),
+    const ProductRepository = createRepository({
+      name: 'Product',
+      schema: {
+        _id: Joi.object(),
+        name: Joi.string().required(),
+        price: Joi.number().required(),
+        createdAt: Joi.date(),
+        updatedAt: Joi.date(),
+      },
     });
 
     const productRouter = generateRESTRouter({

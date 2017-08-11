@@ -36,12 +36,17 @@ memoryStore.merge({
   },
   maxUploadSize: '20mb',
   modules: {
-    storage: {
-      connection: {
-        db: 'makeen-boilerplate',
-        host: 'localhost',
-        port: 27017,
-      },
+    mongodb: {
+      connections: [
+        {
+          name: 'default',
+          config: {
+            db: 'makeen-boilerplate',
+            host: 'localhost',
+            port: 27017,
+          },
+        },
+      ],
     },
     user: {
       jwtConfig: {

@@ -2,7 +2,7 @@ import OctobusModule from 'makeen-octobus';
 import StdoutStore from 'makeen-octobus/build/libs/EventStore/Stdout';
 import LoggerModule from 'makeen-logger';
 import RouterModule from 'makeen-router';
-import StorageModule from 'makeen-storage';
+import MongoDBModule from 'makeen-mongodb';
 import UserModule from 'makeen-user';
 import GQLModule from 'makeen-graphql';
 import MailerModule from 'makeen-mailer';
@@ -17,7 +17,7 @@ export default async config => [
     messageStore: new StdoutStore(),
   }),
   new LoggerModule(await config.get('modules.logger')),
-  new StorageModule(await config.get('modules.storage')),
+  new MongoDBModule(await config.get('modules.mongodb')),
   new UserModule(await config.get('modules.user')),
   new MailerModule(await config.get('modules.mailer')),
   new FileStorageModule(await config.get('modules.fileStorage')),
