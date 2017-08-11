@@ -7,15 +7,8 @@ class Play extends Module {
     'router:load': () => {},
   };
 
-  async setup() {
-    const [
-      { jwtMiddleware },
-      { generateRESTRouter, addRouter },
-      { createRepository },
-    ] = await this.dependencies(['user', 'router', 'mongoDb']);
-
-    addRouter('playRouter', router({ jwtMiddleware }));
-
+  // eslint-disable-next-line class-methods-use-this
+  createProductResource({ generateRESTRouter, createRepository, addRouter }) {
     const ProductRepository = createRepository({
       name: 'Product',
       schema: {
@@ -32,6 +25,22 @@ class Play extends Module {
     });
 
     addRouter('/products', 'productRouter', productRouter);
+  }
+
+  async setup() {
+    const [
+      { jwtMiddleware },
+      { generateRESTRouter, addRouter },
+      { createRepository },
+    ] = await this.dependencies(['user', 'router', 'mongoDb']);
+
+    addRouter('playRouter', router({ jwtMiddleware }));
+
+    this.createProductResource({
+      generateRESTRouter,
+      createRepository,
+      addRouter,
+    });
   }
 }
 
