@@ -1702,31 +1702,31 @@ lsmod@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lsmod/-/lsmod-1.0.0.tgz#9a00f76dca36eb23fa05350afe1b585d4299e64b"
 
-makeen-config@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/makeen-config/-/makeen-config-0.3.0.tgz#ca7b5ad5c5a79c4e85e5d42b44e36bc88a96c24b"
+makeen-config@^0.4.1:
+  version "0.4.1"
+  resolved "https://registry.yarnpkg.com/makeen-config/-/makeen-config-0.4.1.tgz#b6fb655159bd50a9f0d2056572269dd780cadbcf"
   dependencies:
     invariant "2.2.2"
     lodash "4.17.4"
 
-makeen-file-storage@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/makeen-file-storage/-/makeen-file-storage-1.4.0.tgz#02507eff4fc3901a538a1fed6d69734e7134be66"
+makeen-file-storage@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/makeen-file-storage/-/makeen-file-storage-1.6.1.tgz#d00bd636b0e4638cb79d4155cdee94ebd6cf4dec"
   dependencies:
     boom "5.1.0"
     express "4.15.3"
     fs-extra "^3.0.1"
     joi "10.5.1"
-    makeen "^1.2.3"
-    makeen-mongodb "^1.1.0"
-    makeen-router "^1.4.0"
+    makeen "^1.4.1"
+    makeen-mongodb "^1.3.1"
+    makeen-router "^1.6.1"
     mongodb "2.2.27"
     multer "1.3.0"
     octobus.js "1.1.2"
 
-makeen-graphql@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/makeen-graphql/-/makeen-graphql-1.3.0.tgz#6beca8824d12370d19c00d8463c10db8536d03d1"
+makeen-graphql@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/makeen-graphql/-/makeen-graphql-1.5.1.tgz#190d93aa7901f029f7c1df089840c8a0d3e11340"
   dependencies:
     express "4.15.3"
     fs-extra "^3.0.1"
@@ -1738,35 +1738,35 @@ makeen-graphql@^1.3.0:
     isomorphic-fetch "2.2.1"
     joi "10.5.1"
     lodash "4.17.4"
-    makeen "^1.2.3"
+    makeen "^1.4.1"
     react "15.5.4"
     react-dom "15.5.4"
 
-makeen-health@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/makeen-health/-/makeen-health-1.3.0.tgz#c22e523c56522480d34fa76124c71564e796c59c"
+makeen-health@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/makeen-health/-/makeen-health-1.5.1.tgz#77980ea9dfc29e8a78a94d595c525d84b060ce69"
   dependencies:
     express "4.15.3"
     joi "10.5.1"
-    makeen "^1.2.3"
+    makeen "^1.4.1"
 
-makeen-logger@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/makeen-logger/-/makeen-logger-1.3.0.tgz#3bde801f7c7a07e25697a647ad98b96ffa4372e3"
+makeen-logger@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/makeen-logger/-/makeen-logger-1.5.1.tgz#bc87164d3a2a6d5e5d086e7aef8d3e368e223deb"
   dependencies:
     cli-table "0.3.1"
     joi "10.5.1"
-    makeen "^1.2.3"
+    makeen "^1.4.1"
     winston "2.3.1"
 
-makeen-mailer@^1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/makeen-mailer/-/makeen-mailer-1.3.0.tgz#cdf9587e27199104b88406ea4e83491695c552ad"
+makeen-mailer@^1.5.1:
+  version "1.5.1"
+  resolved "https://registry.yarnpkg.com/makeen-mailer/-/makeen-mailer-1.5.1.tgz#fd67735508193985484938e7a08b07fcd000fc46"
   dependencies:
     express "4.15.3"
     fs-extra "^3.0.1"
     joi "10.5.1"
-    makeen "^1.2.3"
+    makeen "^1.4.1"
     nodemailer "4.0.1"
     octobus.js "1.1.2"
     prop-types "^15.5.10"
@@ -1774,58 +1774,58 @@ makeen-mailer@^1.3.0:
     react-dom "15.5.4"
     serve-index "1.9.0"
 
-makeen-mongodb@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/makeen-mongodb/-/makeen-mongodb-1.1.0.tgz#d21d378cb40a8fb5b03dbbd77447a6f3942b9221"
+makeen-mongodb@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/makeen-mongodb/-/makeen-mongodb-1.3.1.tgz#d02e29633833e0b9c718ddd3d2137c0453c49695"
   dependencies:
     joi "10.5.1"
-    makeen "^1.2.3"
+    makeen "^1.4.1"
     mongo-dnorm "0.2.4"
     mongodb "2.2.27"
     octobus-crud "0.6.0"
     octobus-mongodb-store "0.5.0"
 
-makeen-octobus@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/makeen-octobus/-/makeen-octobus-1.5.0.tgz#988db77897cddcc1340cb6bef85fde09b4c703b5"
+makeen-octobus@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/makeen-octobus/-/makeen-octobus-1.7.1.tgz#10a272ed21e61eafbaab3b694e35862f1fd65e91"
   dependencies:
     axios "0.16.2"
     express "4.15.3"
     joi "10.6.0"
     lodash "4.17.4"
-    makeen "^1.2.3"
+    makeen "^1.4.1"
     octobus.js "1.1.2"
 
-makeen-router@^1.4.0:
-  version "1.4.0"
-  resolved "https://registry.yarnpkg.com/makeen-router/-/makeen-router-1.4.0.tgz#06915a85b222fcb2048ec324adef52dc5b515731"
+makeen-router@^1.6.1:
+  version "1.6.1"
+  resolved "https://registry.yarnpkg.com/makeen-router/-/makeen-router-1.6.1.tgz#36a854e771891595e4b05c47e0bf90e2ea5c50bf"
   dependencies:
     boom "4.2.0"
     celebrate "4.0.1"
     express "4.15.3"
     joi "10.2.2"
     lodash "^4.11.1"
-    makeen "^1.2.3"
+    makeen "^1.4.1"
     mongodb "2.2.24"
     mongodb-extended-json "1.9.0"
     octobus.js "1.1.2"
 
-makeen-security@^0.3.0:
-  version "0.3.0"
-  resolved "https://registry.yarnpkg.com/makeen-security/-/makeen-security-0.3.0.tgz#4578acc6fb92a33d50d6ac53021a8e83bcd217ce"
+makeen-security@^0.5.2:
+  version "0.5.2"
+  resolved "https://registry.yarnpkg.com/makeen-security/-/makeen-security-0.5.2.tgz#4e67ec3ce409066c059a855f5011a6124dae96c4"
   dependencies:
     boom "5.1.0"
     express "4.15.3"
     joi "10.5.1"
     lodash "4.17.4"
-    makeen "^1.2.3"
-    makeen-mongodb "^1.1.0"
+    makeen "^1.4.1"
+    makeen-mongodb "^1.3.1"
     mongodb "2.2.27"
     octobus.js "1.1.2"
 
-makeen-user@^1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/makeen-user/-/makeen-user-1.5.0.tgz#5343a30a95d6af5e4d42a70aa583e96d4b987760"
+makeen-user@^1.7.1:
+  version "1.7.1"
+  resolved "https://registry.yarnpkg.com/makeen-user/-/makeen-user-1.7.1.tgz#240fd6120b659c93bc3a83312ee483e4c135f097"
   dependencies:
     bcryptjs "2.4.3"
     boom "5.1.0"
@@ -1835,9 +1835,9 @@ makeen-user@^1.5.0:
     joi "10.5.1"
     jsonwebtoken "7.4.1"
     lodash "4.17.4"
-    makeen "^1.2.3"
-    makeen-mongodb "^1.1.0"
-    makeen-router "^1.4.0"
+    makeen "^1.4.1"
+    makeen-mongodb "^1.3.1"
+    makeen-router "^1.6.1"
     moment "2.18.1"
     mongodb "2.2.27"
     octobus.js "1.1.2"
@@ -1847,9 +1847,9 @@ makeen-user@^1.5.0:
     prop-types "^15.5.10"
     react "15.5.4"
 
-makeen@^1.2.3:
-  version "1.2.3"
-  resolved "https://registry.yarnpkg.com/makeen/-/makeen-1.2.3.tgz#7ec3cfc14590d6ee7144a46d5620e4c5b42c592c"
+makeen@^1.4.1:
+  version "1.4.1"
+  resolved "https://registry.yarnpkg.com/makeen/-/makeen-1.4.1.tgz#9526e8cfc339069d200b96bab5e3e43ad6a18ce1"
   dependencies:
     boom "5.1.0"
     express "4.15.3"

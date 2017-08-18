@@ -2,7 +2,7 @@ import { Module } from 'makeen';
 
 class Admin extends Module {
   hooks = {
-    'permissions:define': ({ permissionsManager }) => {
+    'makeen.security.definePermissions': ({ permissionsManager }) => {
       permissionsManager
         .define('p21')
         .define('admin', {
@@ -14,7 +14,7 @@ class Admin extends Module {
   };
 
   async setup() {
-    await this.dependency('security');
+    await this.dependency('makeen.security');
   }
 }
 

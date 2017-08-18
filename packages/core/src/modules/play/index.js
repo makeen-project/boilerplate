@@ -4,7 +4,7 @@ import router from './router';
 
 class Play extends Module {
   hooks = {
-    'router:load': () => {},
+    'makeen.router.load': () => {},
   };
 
   // eslint-disable-next-line class-methods-use-this
@@ -32,9 +32,15 @@ class Play extends Module {
       { jwtMiddleware },
       { generateRESTRouter, addRouter },
       { createRepository },
-    ] = await this.dependencies(['user', 'router', 'mongoDb']);
+    ] = await this.dependencies([
+      'makeen.user',
+      'makeen.router',
+      'makeen.mongoDb',
+    ]);
 
     addRouter('playRouter', router({ jwtMiddleware }));
+
+    // console.log(await User.login({ username: 'victorz', password: 'admin' }));
 
     this.createProductResource({
       generateRESTRouter,

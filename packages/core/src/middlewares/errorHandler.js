@@ -9,7 +9,7 @@ export default {
       return errorHandler(err, req, res, next);
     }
 
-    req.app.modules.get('logger.log').error(err);
+    req.app.modules.get('makeen.logger').log.error(err);
     res.status(500);
 
     return res.json({
