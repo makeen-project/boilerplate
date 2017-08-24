@@ -6,11 +6,10 @@ import AliasStore from 'makeen-config/build/stores/Alias';
 import randomstring from 'randomstring';
 
 const config = new Config();
-const rootDir = path.resolve(__dirname, '../../');
 
 config.addStore(
   new MemoryStore({
-    rootDir,
+    rootDir: path.resolve(__dirname, '../../'),
     rootURL: 'http://localhost:3000',
     isDev: process.env.NODE_ENV === 'development',
     port: 3000,
@@ -21,7 +20,7 @@ config.addStore(
       jwt: randomstring.generate(),
     },
     paths: {
-      web: path.resolve(rootDir, './web'),
+      web: '',
     },
     session: {
       secret: '',
@@ -38,11 +37,7 @@ config.addStore(
         connections: [
           {
             name: 'default',
-            config: {
-              db: 'makeen-boilerplate',
-              host: 'localhost',
-              port: 27017,
-            },
+            url: 'mongodb://localhost:27017/makeen-boilerplate',
           },
         ],
       },
@@ -64,21 +59,20 @@ config.addStore(
         passportConfig: {
           enabled: false,
         },
-        rootURL: 'http://localhost:3000',
       },
       mailer: {
         transport: {
           jsonTransport: true,
         },
         saveToDisk: true,
-        emailsDir: path.resolve(rootDir, './emails'),
-        templatesDir: path.resolve(rootDir, './build/modules/mailer/templates'),
+        emailsDir: '',
+        templatesDir: '',
         middlewarePivot: {
           before: 'isMethod',
         },
       },
       fileStorage: {
-        uploadDir: path.resolve(rootDir, './uploads'),
+        uploadDir: '',
       },
       gql: {
         graphiql: {
@@ -91,7 +85,7 @@ config.addStore(
         },
       },
       logger: {
-        logsDir: path.resolve(rootDir, './logs'),
+        logsDir: '',
       },
     },
   }),
@@ -102,6 +96,16 @@ config.addStore(new ENVStore('MAKEEN_CONFIG'));
 config.addStore(
   new AliasStore(config, {
     'modules.user.jwtSecret': 'secrets.jwt',
+    'modules.user.rootURL': 'rootURL',
+    'modules.logger.logsDir': async c =>
+      path.resolve(await c.get('rootDir'), './logs'),
+    'paths.web': async c => path.resolve(await c.get('rootDir'), './web'),
+    'modules.mailer.emailsDir': async c =>
+      path.resolve(await c.get('rootDir'), './emails'),
+    'modules.mailer.templatesDir': async c =>
+      path.resolve(await c.get('rootDir'), './build/modules/mailer/templates'),
+    'modules.fileStorage.uploadDir': async c =>
+      path.resolve(await c.get('rootDir'), './uploads'),
   }),
 );
 
