@@ -31,7 +31,7 @@
     "joi": "10.6.0",
     "lodash": "4.17.4",
     "makeen": "^1.4.1",
-    "makeen-config": "^0.4.2",
+    "makeen-config": "^0.4.4",
     "makeen-file-storage": "^1.6.3",
     "makeen-graphql": "^1.5.3",
     "makeen-health": "^1.5.1",

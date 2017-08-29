@@ -1777,9 +1777,9 @@ lsmod@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/lsmod/-/lsmod-1.0.0.tgz#9a00f76dca36eb23fa05350afe1b585d4299e64b"
 
-makeen-config@^0.4.2:
-  version "0.4.2"
-  resolved "https://registry.yarnpkg.com/makeen-config/-/makeen-config-0.4.2.tgz#233c57e7608538c255d0284583298624e95ddd11"
+makeen-config@^0.4.4:
+  version "0.4.4"
+  resolved "https://registry.yarnpkg.com/makeen-config/-/makeen-config-0.4.4.tgz#3a56425c444381c6cd365be7dd39a407a3229401"
   dependencies:
     invariant "2.2.2"
     lodash "4.17.4"
