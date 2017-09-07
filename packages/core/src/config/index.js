@@ -4,6 +4,8 @@ import MemoryStore from 'makeen-config/build/stores/Memory';
 import ENVStore from 'makeen-config/build/stores/Env';
 import AliasStore from 'makeen-config/build/stores/Alias';
 import randomstring from 'randomstring';
+import StdoutStore from 'makeen-octobus/build/libs/EventStore/Stdout';
+import NullStore from 'makeen-octobus/build/libs/EventStore/Null';
 
 const config = new Config();
 
@@ -87,6 +89,9 @@ config.addStore(
       logger: {
         logsDir: '',
       },
+      octobus: {
+        messageStore: null,
+      },
     },
   }),
 );
@@ -106,6 +111,10 @@ config.addStore(
       path.resolve(await c.get('rootDir'), './build/modules/mailer/templates'),
     'modules.fileStorage.uploadDir': async c =>
       path.resolve(await c.get('rootDir'), './uploads'),
+    'modules.octobus.messageStore': async c => {
+      const isDev = await c.get('isDev');
+      return isDev ? new StdoutStore() : new NullStore();
+    },
   }),
 );
 

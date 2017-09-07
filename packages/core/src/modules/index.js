@@ -1,5 +1,4 @@
 import OctobusModule from 'makeen-octobus';
-import StdoutStore from 'makeen-octobus/build/libs/EventStore/Stdout';
 import LoggerModule from 'makeen-logger';
 import RouterModule from 'makeen-router';
 import MongoDBModule from 'makeen-mongodb';
@@ -13,9 +12,7 @@ import PlayModule from './play';
 import AdminModule from './admin';
 
 export default async config => [
-  new OctobusModule({
-    messageStore: new StdoutStore(),
-  }),
+  new OctobusModule(await config.get('modules.octobus')),
   new LoggerModule(await config.get('modules.logger')),
   new MongoDBModule(await config.get('modules.mongodb')),
   new UserModule(await config.get('modules.user')),
