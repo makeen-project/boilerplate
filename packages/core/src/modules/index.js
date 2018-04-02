@@ -2,7 +2,7 @@ import OctobusModule from 'makeen-octobus';
 import LoggerModule from 'makeen-logger';
 import RouterModule from 'makeen-router';
 import MongoDBModule from 'makeen-mongodb';
-import UserModule from 'makeen-user';
+import UserModule from 'makeen-user-module';
 import GQLModule from 'makeen-graphql';
 import MailerModule from 'makeen-mailer';
 import FileStorageModule from 'makeen-file-storage';
