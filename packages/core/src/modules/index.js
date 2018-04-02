@@ -6,13 +6,17 @@ import UserModule from 'makeen-user';
 import GQLModule from 'makeen-graphql';
 import MailerModule from 'makeen-mailer';
 import FileStorageModule from 'makeen-file-storage';
-import SecurityModule from 'makeen-security';
+import SecurityModule from 'makeen-security-module';
 import HealthModule from 'makeen-health';
 import PlayModule from './play';
 import AdminModule from './admin';
+import SearchModule from 'makeen-search';
+import AuditTrailModule from 'makeen-audit-trail';
 
 export default async config => [
   new OctobusModule(await config.get('modules.octobus')),
+  new AuditTrailModule(await config.get('modules.auditTrail')),
+  new SearchModule(await config.get('modules.search')),
   new LoggerModule(await config.get('modules.logger')),
   new MongoDBModule(await config.get('modules.mongodb')),
   new UserModule(await config.get('modules.user')),

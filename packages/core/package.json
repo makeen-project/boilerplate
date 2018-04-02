@@ -39,9 +39,13 @@
     "makeen-mailer": "^1.5.3",
     "makeen-octobus": "^1.7.1",
     "makeen-router": "^1.6.4",
-    "makeen-security": "^0.5.8",
     "makeen-mongodb": "^1.4.2",
-    "makeen-user": "^1.8.5",
+
+    "makeen-user-module": "*",
+    "makeen-search": "*",
+    "makeen-security-module": "*",
+    "makeen-audit-trail": "*",
+
     "moment": "2.18.1",
     "mongodb": "2.2.27",
     "mongodb-migrate": "2.0.2",
