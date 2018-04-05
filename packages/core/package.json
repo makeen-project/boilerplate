@@ -45,6 +45,7 @@
     "makeen-search": "*",
     "makeen-security-module": "*",
     "makeen-audit-trail": "*",
+    "makeen-auth-okta": "*",
 
     "moment": "2.18.1",
     "mongodb": "2.2.27",
