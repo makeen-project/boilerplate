@@ -35,6 +35,11 @@ config.addStore(
     },
     maxUploadSize: '20mb',
     modules: {
+      okta: {
+        jwtSecret: 'your_secret',
+        rootURL: 'Url for email',
+        oktaConfig: {},
+      },
       mongodb: {
         connections: [
           {
