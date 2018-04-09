@@ -38,7 +38,10 @@ config.addStore(
       okta: {
         jwtSecret: 'your_secret',
         rootURL: 'Url for email',
-        oktaConfig: {},
+        oktaConfig: {
+          url: '', // your okta url
+          token: '', // your okta dev token
+        },
       },
       mongodb: {
         connections: [
