@@ -36,7 +36,7 @@
     "makeen-graphql": "^1.5.6",
     "makeen-health": "^1.5.3",
     "makeen-logger": "^1.5.4",
-    "makeen-mailer": "^1.5.3",
+    "makeen-mailer-module": "*",
     "makeen-octobus": "^1.7.1",
     "makeen-router": "^1.6.4",
     "makeen-mongodb": "^1.4.2",

@@ -4,7 +4,7 @@ import RouterModule from 'makeen-router';
 import MongoDBModule from 'makeen-mongodb';
 import UserModule from 'makeen-user-module';
 import GQLModule from 'makeen-graphql';
-import MailerModule from 'makeen-mailer';
+import MailerModule from 'makeen-mailer-module';
 import FileStorageModule from 'makeen-file-storage';
 import SecurityModule from 'makeen-security-module';
 import HealthModule from 'makeen-health';
